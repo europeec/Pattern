@@ -3,4 +3,70 @@
    uuid = "0AB633CF-25CB-4F9C-BF8E-6D4B555E3BDE"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "47076D85-0563-45EA-A3F3-0E61D4E113F2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MPVApplication/ServiceLayer/NetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "getPosts(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "47076D85-0563-45EA-A3F3-0E61D4E113F2 - 9a026c913dfa0e2e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MPVApplication.NetworkService.getPosts(completion: (Swift.Result&lt;Swift.Array&lt;MPVApplication.Post&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MPVApplication"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dimaeuropeec/Documents/Pattern/MVP/MPVApplication/MPVApplication/ServiceLayer/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "440">
+               </Location>
+               <Location
+                  uuid = "47076D85-0563-45EA-A3F3-0E61D4E113F2 - b44c6605d48f938b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in MPVApplication.NetworkService.getPosts(completion: (Swift.Result&lt;Swift.Array&lt;MPVApplication.Post&gt;, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MPVApplication"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dimaeuropeec/Documents/Pattern/MVP/MPVApplication/MPVApplication/ServiceLayer/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "156">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B44589AA-DD26-4D5A-9C16-349490198DCF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MPVApplication/ServiceLayer/NetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "getPosts(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

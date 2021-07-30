@@ -7,18 +7,16 @@
 
 import Foundation
 
-//{
-//    "postId": 2,
-//    "id": 6,
-//    "name": "et fugit eligendi deleniti quidem qui sint nihil autem",
-//    "email": "Presley.Mueller@myrl.com",
-//    "body": "doloribus at sed quis culpa deserunt consectetur qui praesentium\naccusamus fugiat dicta\nvoluptatem rerum ut voluptate autem\nvoluptatem repellendus aspernatur dolorem in"
-//  }
+// {
+//    "userId": 1,
+//    "id": 1,
+//    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+//    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+// }
 
 struct Post: Decodable {
-    var postId: Int
+    var userId: Int
     var id: Int
-    var name: String
-    var email: String
+    var title: String
     var body: String
 }

@@ -13,10 +13,11 @@ protocol BuilderProtocol {
 
 class Builder: BuilderProtocol {
     func createMainView() -> UIViewController {
-        
-        
-        return UIViewController()
+        let view = MainViewController()
+        let networkService = NetworkService()
+        let presenter = MainPresenter(view: view, networkService: networkService)
+        view.presenter = presenter
+        return view
     }
-    
     
 }

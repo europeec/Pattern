@@ -9,24 +9,42 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-    @IBOutlet weak var commentsTableView: UITableView!
+    @IBOutlet weak var postsTableView: UITableView!
+    
+    var presenter: MainViewPresenterProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        commentsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        title = "API Caller"
+        postsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
 }
 
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        3
+        presenter.posts?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let post = presenter.posts?[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "hello"
+        cell.textLabel?.text = post?.body
         return cell
     }
      
+}
+
+extension MainViewController: MainViewProtocol {
+    func success() {
+        self.postsTableView.reloadData()
+    }
+    
+    func failure() {
+        let alert = UIAlertController(title: "Ooops..", message: "Network Error", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Oke", style: .default))
+        self.present(alert, animated: true)
+    }
+    
 }

@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="MPVApplication" customModuleProvider="target">
             <connections>
-                <outlet property="commentsTableView" destination="jAo-hS-QkI" id="YbW-W5-1tQ"/>
+                <outlet property="postsTableView" destination="jAo-hS-QkI" id="YbW-W5-1tQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
