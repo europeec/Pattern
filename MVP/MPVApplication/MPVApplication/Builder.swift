@@ -13,7 +13,6 @@ protocol BuilderProtocol {
 }
 
 class Builder: BuilderProtocol {
-    
     func createMainView(router: RouterProtocol) -> UIViewController {
         let view = MainViewController()
         let networkService = NetworkService()
@@ -23,7 +22,9 @@ class Builder: BuilderProtocol {
     }
     
     func createDetailView(post: Post?, router: RouterProtocol) -> UIViewController {
-        
-        return MainViewController()
+        let view = DetailView()
+        let presenter = DetailPresenter(view: view, router: router, post: post)
+        view.presenter = presenter
+        return view
     }
 }
