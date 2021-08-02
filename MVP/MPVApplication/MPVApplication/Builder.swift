@@ -23,6 +23,7 @@ class Builder: BuilderProtocol {
     }
     
     func createDetailView(post: Post?, router: RouterProtocol) -> UIViewController {
+        
         return MainViewController()
     }
 }
