@@ -9,9 +9,11 @@ import UIKit
 
 protocol BuilderProtocol {
     func createMainView() -> UIViewController
+    func createDetailView() -> UIViewController
 }
 
 class Builder: BuilderProtocol {
+    
     func createMainView() -> UIViewController {
         let view = MainViewController()
         let networkService = NetworkService()
@@ -20,4 +22,7 @@ class Builder: BuilderProtocol {
         return view
     }
     
+    func createDetailView() -> UIViewController {
+        return MainViewController()
+    }
 }
