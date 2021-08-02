@@ -17,7 +17,7 @@ class Builder: BuilderProtocol {
     func createMainView(router: RouterProtocol) -> UIViewController {
         let view = MainViewController()
         let networkService = NetworkService()
-        let presenter = MainPresenter(view: view, networkService: networkService)
+        let presenter = MainPresenter(view: view, router: router, networkService: networkService)
         view.presenter = presenter
         return view
     }
