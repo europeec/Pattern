@@ -15,6 +15,8 @@
 		F055455B26B8629E0036B06B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F055455926B8629E0036B06B /* LaunchScreen.storyboard */; };
 		F055456726B864C10036B06B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F055456626B864C10036B06B /* Model.swift */; };
 		F055456B26B865320036B06B /* TodoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F055456A26B865320036B06B /* TodoData.swift */; };
+		F055456D26B865C80036B06B /* MainVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F055456C26B865C80036B06B /* MainVIewModel.swift */; };
+		F055456F26B866C20036B06B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F055456E26B866C20036B06B /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		F055455C26B8629E0036B06B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F055456626B864C10036B06B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		F055456A26B865320036B06B /* TodoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoData.swift; sourceTree = "<group>"; };
+		F055456C26B865C80036B06B /* MainVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVIewModel.swift; sourceTree = "<group>"; };
+		F055456E26B866C20036B06B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 		F055456426B864A90036B06B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F055456C26B865C80036B06B /* MainVIewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -101,6 +106,7 @@
 		F055456826B865030036B06B /* ServiceLayer */ = {
 			isa = PBXGroup;
 			children = (
+				F055456E26B866C20036B06B /* NetworkService.swift */,
 			);
 			path = ServiceLayer;
 			sourceTree = "<group>";
@@ -197,10 +203,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F055455326B862940036B06B /* MainViewController.swift in Sources */,
+				F055456D26B865C80036B06B /* MainVIewModel.swift in Sources */,
 				F055454F26B862940036B06B /* AppDelegate.swift in Sources */,
 				F055455126B862940036B06B /* SceneDelegate.swift in Sources */,
 				F055456B26B865320036B06B /* TodoData.swift in Sources */,
 				F055456726B864C10036B06B /* Model.swift in Sources */,
+				F055456F26B866C20036B06B /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

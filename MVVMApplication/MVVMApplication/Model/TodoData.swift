@@ -16,7 +16,7 @@ import Foundation
    },
  */
 
-struct TodoData: Identifiable {
+struct TodoData: Decodable {
     var userId: Int
     var id: Int
     var title: String
