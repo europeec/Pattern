@@ -8,13 +8,13 @@
 import UIKit
 
 protocol BuilderProtocol {
-    func createMainView() -> UIViewController
-    func createDetailView(post: Post?) -> UIViewController
+    func createMainView(router: RouterProtocol) -> UIViewController
+    func createDetailView(post: Post?, router: RouterProtocol) -> UIViewController
 }
 
 class Builder: BuilderProtocol {
     
-    func createMainView() -> UIViewController {
+    func createMainView(router: RouterProtocol) -> UIViewController {
         let view = MainViewController()
         let networkService = NetworkService()
         let presenter = MainPresenter(view: view, networkService: networkService)
@@ -22,7 +22,7 @@ class Builder: BuilderProtocol {
         return view
     }
     
-    func createDetailView(post: Post?) -> UIViewController {
+    func createDetailView(post: Post?, router: RouterProtocol) -> UIViewController {
         return MainViewController()
     }
 }

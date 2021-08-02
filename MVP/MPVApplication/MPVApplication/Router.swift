@@ -29,14 +29,14 @@ class Router: RouterProtocol {
     
     func initialViewController() {
         if let navigationController = navigationController {
-            guard let mainViewController = builder?.createMainView() else { return }
+            guard let mainViewController = builder?.createMainView(router: self) else { return }
             navigationController.viewControllers = [mainViewController]
         }
     }
     
     func showDetail(post: Post?) {
         if let navigationController = navigationController {
-            guard let detailViewController = builder?.createDetailView(post: post) else { return }
+            guard let detailViewController = builder?.createDetailView(post: post, router: self) else { return }
             navigationController.pushViewController(detailViewController, animated: true)
         }
     }

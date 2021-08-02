@@ -19,21 +19,23 @@ protocol MainViewProtocol: AnyObject {
 protocol MainViewPresenterProtocol {
     var posts: [Post]? { get set }
     
-    init(view: MainViewProtocol, networkService: NetworkServiceProtocol)
+    init(view: MainViewProtocol, router: RouterProtocol, networkService: NetworkServiceProtocol)
     func getPosts()
+    func tapOnTheCell(post: Post?)
 }
 
 // MARK: - Class
 class MainPresenter: MainViewPresenterProtocol {
     weak var view: MainViewProtocol?
+    var router: RouterProtocol?
     var networkService: NetworkServiceProtocol
-    
+
     var posts: [Post]?
     
-    required init(view: MainViewProtocol, networkService: NetworkServiceProtocol) {
+    required init(view: MainViewProtocol, router: RouterProtocol, networkService: NetworkServiceProtocol) {
         self.view = view
+        self.router = router
         self.networkService = networkService
-        
         getPosts()
     }
     
@@ -51,5 +53,9 @@ class MainPresenter: MainViewPresenterProtocol {
                 }
             }
         }
+    }
+    
+    func tapOnTheCell(post: Post?) {
+        router?.showDetail(post: post)
     }
 }

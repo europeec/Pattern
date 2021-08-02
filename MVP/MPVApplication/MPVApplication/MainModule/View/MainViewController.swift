@@ -21,20 +21,7 @@ class MainViewController: UIViewController {
     }
 }
 
-extension MainViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        presenter.posts?.count ?? 0
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let post = presenter.posts?[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = post?.body
-        return cell
-    }
-     
-}
-
+// MARK: - Protocol
 extension MainViewController: MainViewProtocol {
     func success() {
         self.postsTableView.reloadData()
@@ -46,5 +33,26 @@ extension MainViewController: MainViewProtocol {
         alert.addAction(UIAlertAction(title: "Oke", style: .default))
         self.present(alert, animated: true)
     }
+}
+
+// MARK: - TableVeiwDataSource
+extension MainViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        presenter.posts?.count ?? 0
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let post = presenter.posts?[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = post?.body
+        return cell
+    }
+}
+
+// MARK: - TableViewDelegate
+extension MainViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let post = presenter.posts?[indexPath.row]
+        presenter.tapOnTheCell(post: post)
+    }
 }
