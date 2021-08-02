@@ -6,17 +6,20 @@
 //
 
 import UIKit
-
+// MARK: - Protocols
+// MARK: View Protocol
 protocol DetailViewProtocol: AnyObject {
     func setPost(post: Post?)
 }
 
+// MARK: ViewPresenterProtocol
 protocol DetailViewPresenterProtocol: AnyObject {
     init(view: DetailViewProtocol, router: RouterProtocol, post: Post?)
     func setComment()
     func pop()
 }
 
+// MARK: Class 
 class DetailPresenter: DetailViewPresenterProtocol {
     weak var view: DetailViewProtocol?
     var router: RouterProtocol?

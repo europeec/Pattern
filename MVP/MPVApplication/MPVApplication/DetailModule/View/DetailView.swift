@@ -8,7 +8,7 @@
 import UIKit
 
 class DetailView: UIViewController {
-
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
     
