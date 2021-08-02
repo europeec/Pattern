@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		F055454F26B862940036B06B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F055454E26B862940036B06B /* AppDelegate.swift */; };
 		F055455126B862940036B06B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F055455026B862940036B06B /* SceneDelegate.swift */; };
-		F055455326B862940036B06B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F055455226B862940036B06B /* ViewController.swift */; };
+		F055455326B862940036B06B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F055455226B862940036B06B /* MainViewController.swift */; };
 		F055455626B862940036B06B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F055455426B862940036B06B /* Main.storyboard */; };
 		F055455826B8629E0036B06B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F055455726B8629E0036B06B /* Assets.xcassets */; };
 		F055455B26B8629E0036B06B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F055455926B8629E0036B06B /* LaunchScreen.storyboard */; };
+		F055456726B864C10036B06B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F055456626B864C10036B06B /* Model.swift */; };
+		F055456B26B865320036B06B /* TodoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F055456A26B865320036B06B /* TodoData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F055454B26B862940036B06B /* MVVMApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F055454E26B862940036B06B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F055455026B862940036B06B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F055455226B862940036B06B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F055455226B862940036B06B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F055455526B862940036B06B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F055455726B8629E0036B06B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F055455A26B8629E0036B06B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F055455C26B8629E0036B06B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F055456626B864C10036B06B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		F055456A26B865320036B06B /* TodoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +62,47 @@
 			children = (
 				F055454E26B862940036B06B /* AppDelegate.swift */,
 				F055455026B862940036B06B /* SceneDelegate.swift */,
-				F055455226B862940036B06B /* ViewController.swift */,
+				F055456826B865030036B06B /* ServiceLayer */,
+				F055456526B864AF0036B06B /* Model */,
+				F055456426B864A90036B06B /* ViewModel */,
+				F055456326B864A00036B06B /* View */,
 				F055455426B862940036B06B /* Main.storyboard */,
 				F055455726B8629E0036B06B /* Assets.xcassets */,
 				F055455926B8629E0036B06B /* LaunchScreen.storyboard */,
 				F055455C26B8629E0036B06B /* Info.plist */,
 			);
 			path = MVVMApplication;
+			sourceTree = "<group>";
+		};
+		F055456326B864A00036B06B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F055455226B862940036B06B /* MainViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F055456426B864A90036B06B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F055456526B864AF0036B06B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F055456626B864C10036B06B /* Model.swift */,
+				F055456A26B865320036B06B /* TodoData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F055456826B865030036B06B /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ServiceLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +115,7 @@
 				F055454726B862940036B06B /* Sources */,
 				F055454826B862940036B06B /* Frameworks */,
 				F055454926B862940036B06B /* Resources */,
+				F055456226B8635B0036B06B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -132,14 +171,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F055456226B8635B0036B06B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "    if which swiftlint >/dev/null; then\n        swiftlint\n    else\n        echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\n        exit 1\n    fi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F055454726B862940036B06B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F055455326B862940036B06B /* ViewController.swift in Sources */,
+				F055455326B862940036B06B /* MainViewController.swift in Sources */,
 				F055454F26B862940036B06B /* AppDelegate.swift in Sources */,
 				F055455126B862940036B06B /* SceneDelegate.swift in Sources */,
+				F055456B26B865320036B06B /* TodoData.swift in Sources */,
+				F055456726B864C10036B06B /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
