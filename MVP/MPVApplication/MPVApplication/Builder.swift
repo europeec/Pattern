@@ -9,7 +9,7 @@ import UIKit
 
 protocol BuilderProtocol {
     func createMainView() -> UIViewController
-    func createDetailView() -> UIViewController
+    func createDetailView(post: Post?) -> UIViewController
 }
 
 class Builder: BuilderProtocol {
@@ -22,7 +22,7 @@ class Builder: BuilderProtocol {
         return view
     }
     
-    func createDetailView() -> UIViewController {
+    func createDetailView(post: Post?) -> UIViewController {
         return MainViewController()
     }
 }
