@@ -18,6 +18,10 @@ class DetailView: UIViewController {
         super.viewDidLoad()
         presenter.setComment()
     }
+    
+    @IBAction func buttonTapped(_ sender: Any) {
+        presenter.pop()
+    }
 }
 
 // MARK: - Protocol

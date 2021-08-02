@@ -14,6 +14,7 @@ protocol DetailViewProtocol: AnyObject {
 protocol DetailViewPresenterProtocol: AnyObject {
     init(view: DetailViewProtocol, router: RouterProtocol, post: Post?)
     func setComment()
+    func pop()
 }
 
 class DetailPresenter: DetailViewPresenterProtocol {
@@ -29,5 +30,9 @@ class DetailPresenter: DetailViewPresenterProtocol {
     
     func setComment() {
         self.view?.setPost(post: post)
+    }
+    
+    func pop() {
+        router?.popToRoot()
     }
 }
